@@ -1,0 +1,19 @@
+{
+  "name": "reacttemplate",
+  "version": "1.0.0",
+  "description": "A template project for react project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony-Donghua-Han/ReactExample.git"
+  },
+  "author": "Tony (Donghua)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tony-Donghua-Han/ReactExample/issues"
+  },
+  "homepage": "https://github.com/Tony-Donghua-Han/ReactExample#readme"
+}
