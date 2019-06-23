@@ -57,3 +57,14 @@ This section contains all related dev-ops tools as well as it's related setting 
         - package.json       # list of npm script to run and package dependencies
         - package-lock.json  # lock file for npm packages, read on npm for more detail
 ```
+
+## 3. Webpack
+
+```yaml
+    setting-files:
+        - webpack.config.js      # Basic Webpack setting file
+    npm-package:
+        - webpack                # Base package
+        - webpack-cli            # Base requirement package
+        - html-webpack-plugin    # Generate an html with javascript embedded
+```
