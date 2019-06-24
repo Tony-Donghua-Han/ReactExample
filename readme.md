@@ -62,13 +62,18 @@ This section contains all related dev-ops tools as well as it's related setting 
 
 ```yaml
     setting-files:
-        - webpack.config.js      # Basic Webpack setting file
+        - webpack.common.js      # common configuration file, shared by both dev and prod
+        - webpack.dev.js         # development configuration file for local development
+        - webpack.prod.js        # production configuration file for deployed product
     npm-package:
         - webpack                # Base package
         - webpack-cli            # Base requirement package
         - html-webpack-plugin    # Generate an html with javascript embedded
         - handlebars             # HTML template processor, check at https://handlebarsjs.com/
         - handlebars-loader      # Handlebars integration with webpack, support .hbs files
+        - clean-webpack-plugin   # Removes old build folder before creating new ones
+        - webpack-dev-server     # Officla webpack development server with hot reloading
+        - webpack-merge          # Merges webpack configuration file together
 ```
 
 # 4. Typescript
