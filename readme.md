@@ -67,4 +67,30 @@ This section contains all related dev-ops tools as well as it's related setting 
         - webpack                # Base package
         - webpack-cli            # Base requirement package
         - html-webpack-plugin    # Generate an html with javascript embedded
+        - handlebars             # HTML template processor, check at https://handlebarsjs.com/
+        - handlebars-loader      # Handlebars integration with webpack, support .hbs files
+```
+
+# 4. Typescript
+
+```yaml
+    setting-file:
+        - tsconfig               # Typescript config file
+    npm-packages:
+        - source-map-loader      # Integrate source map with TypeScript code
+        - ts-loader              # Webpack integration
+        - typescript             # Base package required to run tsc for compile
+```
+
+# 5. React
+
+```yaml
+    # IMPORTANT NOTE #
+    # React and React dom are included as script tag in the handlebar index.hbs files
+    # these two libraries are not included as dependency to the project, we only
+    # include their type files so their references can be used in code
+
+    npm-packages:
+        - "@types/react"
+        - "@types/react-dom"
 ```
