@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.tsx",
@@ -6,21 +7,22 @@ module.exports = {
     module: {
         rules: [
             {
-                enforce: "pre", 
-                test: /\.js$/, 
+                enforce: "pre",
+                test: /\.js$/,
                 loader: "source-map-loader"
             },
             {
                 test: /\.hbs$/,
                 use: "handlebars-loader",
             },
-            { 
+            {
                 test: /\.tsx?$/,
                 loader: "ts-loader"
             }
         ],
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: "Hello world",
             filename: "mainpage.html",
