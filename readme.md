@@ -62,18 +62,26 @@ This section contains all related dev-ops tools as well as it's related setting 
 
 ```yaml
     setting-files:
-        - webpack.common.js      # common configuration file, shared by both dev and prod
-        - webpack.dev.js         # development configuration file for local development
-        - webpack.prod.js        # production configuration file for deployed product
+        - webpack.common.js       # common configuration file, shared by both dev and prod
+        - webpack.dev.js          # development configuration file for local development
+        - webpack.prod.js         # production configuration file for deployed product
     npm-package:
-        - webpack                # Base package
-        - webpack-cli            # Base requirement package
-        - html-webpack-plugin    # Generate an html with javascript embedded
-        - handlebars             # HTML template processor, check at https://handlebarsjs.com/
-        - handlebars-loader      # Handlebars integration with webpack, support .hbs files
-        - clean-webpack-plugin   # Removes old build folder before creating new ones
-        - webpack-dev-server     # Officla webpack development server with hot reloading
-        - webpack-merge          # Merges webpack configuration file together
+        # Base Webpack Packages
+        - webpack                 # Base package
+        - webpack-cli             # Base requirement package
+        # HTML Generation
+        - html-webpack-plugin     # Generate an html with javascript embedded
+        - handlebars              # HTML template processor, check at https://handlebarsjs.com/
+        - handlebars-loader       # Handlebars integration with webpack, support .hbs files
+        # Multi-webpack configuration and devserver
+        - webpack-dev-server      # Officla webpack development server with hot reloading
+        - webpack-merge           # Merges webpack configuration file together
+        - clean-webpack-plugin    # Removes old build folder before creating new ones
+        # Sass and Css support
+        - css-loader              # Css loader
+        - mini-css-extract-plugin # Extract Css into separate css files
+        - node-sass               # node cass compiler used by sass loader
+        - sass-loader             # Sass loader used for webpack
 ```
 
 # 4. Typescript
@@ -90,7 +98,7 @@ This section contains all related dev-ops tools as well as it's related setting 
 # 5. React
 
 ```yaml
-    # IMPORTANT NOTE #
+    # !!IMPORTANT!! #
     # React and React dom are included as script tag in the handlebar index.hbs files
     # these two libraries are not included as dependency to the project, we only
     # include their type files so their references can be used in code
