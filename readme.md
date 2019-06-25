@@ -3,6 +3,7 @@
 [comment PI]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
 [gitlens PI]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 [markdownhelp PI]: https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+[SASS PI]: https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented#review-details
 
 # **React Project**
 
@@ -10,6 +11,12 @@
 
 - Markdown - Readme file, syntax highlight and validation
 - Git and nm package
+
+## ToDo
+
+- [ ] Add support for Eslint with Typescript and React linting
+- [ ] Add support Jest for unit testing
+- [ ] Add support for Storybook for UI testing
 
 # Quick Setup
 
@@ -20,6 +27,10 @@ Here we provide a quick list of require plugins and it's setting. Check individu
 ## markdownlint - [Official Plugin Page][markdownlink PI]
 
 `Feature: Lint feature for .md documentation files`
+
+## Sass - [Official Plugin Page][SASS PI]
+
+`Feature: Syntax hightlight for SASS files`
 
 # Recommonded Plugins
 
