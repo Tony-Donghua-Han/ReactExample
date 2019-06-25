@@ -1,10 +1,10 @@
 import * as React from "react";
-import "./content.sass"
+import "./content.sass";
 
-export function Content(): JSX.Element {
+export default function Content(): JSX.Element {
     return (
-        <div id='content' className="content">
+        <div id="content" className="content">
             <div className="absolute-centered center-text">Content of body</div>
         </div>
-    )
+    );
 }

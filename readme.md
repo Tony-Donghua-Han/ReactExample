@@ -1,3 +1,4 @@
+[ESLint PI]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [markdownlink PI]: https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
 [icon PI]: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
 [comment PI]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
@@ -9,20 +10,54 @@
 
 ## Feature
 
+- React - external library support
+- Typescript - Compile and type verification
+- Eslint - linting and autofixing
+- Webpack - local and development server
+  - Sass and css - dynamic style loading
+  - Dynamic HTML - html generation code
+  - DevServer - development server for hot-reloading
 - Markdown - Readme file, syntax highlight and validation
-- Git and nm package
+- Git and npm package
 
 ## ToDo
 
-- [ ] Add support for Eslint with Typescript and React linting
-- [ ] Add support Jest for unit testing
-- [ ] Add support for Storybook for UI testing
+- [ ] Jest for unit testing
+- [ ] VS Code debug tool, local debug on both dev and prod
+- [ ] React and redux dev tools in browser
+- [ ] Storybook for UI testing
 
 # Quick Setup
 
 Here we provide a quick list of require plugins and it's setting. Check individual sections to see how each Plugin is used. See Recommonded Plugins for plugins that are nice to have.
 
 `! Install all of the following plugin, you only have to do them once in VS Code. !`
+
+## ESLint - [Official Plugin Page][ESLint PI]
+
+`Feature: Real time linting, auto format on save, keep the code format consistent`
+
+1. Put the following Setting into setting.json for VS COde to recognize typescript code and perform autofix on save
+
+    ```js
+    {
+        "eslint.autoFixOnSave": true,
+        "eslint.validate": [
+            "javascript",
+            "javascriptreact",
+            { "language": "typescript", "autoFix": true },
+            { "language": "typescriptreact", "autoFix": true }
+        ],
+    }
+    ```
+
+2. Disable Auto format on save in VS Code setting, so that code doesn't get formatted twice
+
+    ```js
+    {
+        "editor.formatOnSave": false
+    }
+    ```
 
 ## markdownlint - [Official Plugin Page][markdownlink PI]
 
@@ -36,7 +71,7 @@ Here we provide a quick list of require plugins and it's setting. Check individu
 
 ## vscode-icons - [Official Plugin Page][icon PI]
 
-`Feature: Let's be honest, the default set of icons for all file sucks, we need better different icons for our files`
+`Feature: Let's be honest, we need better icons for our files`
 
 ## Better Comments - [Official Plugin Page][comment PI]
 
@@ -117,4 +152,23 @@ This section contains all related dev-ops tools as well as it's related setting 
     npm-packages:
         - "@types/react"
         - "@types/react-dom"
+```
+
+# 6. Eslint
+
+```yaml
+    setting-files:
+        - eslintrc.yaml                     # Eslint setting, read the file for more detail
+    plugin:
+        - ESLint                            # Eslint plugin, required
+    npm-packages:
+        - eslint                             # Base package
+        - eslint-config-airbnb               # Airbnb recommonded linting for js and react
+        - eslint-plugin-import               # import based rules, comes with airbnb
+        - eslint-plugin-react                # React based rules, comes with airbnb
+        - eslint-plugin-jsx-a11y             # Rules for html accessibility
+        # Typescript based plugins
+        - "@typescript-eslint/eslint-plugin" # Typescript rules for eslint
+        - "@typescript-eslint/parser"        # Eslint parser for typescript
+        - eslint-import-resolver-typescript  # Resolver for typescript and import
 ```

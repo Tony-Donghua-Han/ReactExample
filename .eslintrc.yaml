@@ -1,0 +1,47 @@
+# ----------IMPORTANT, Read before change ------------------
+# Make sure to run npm run eslint after changing this file
+# ESlint plugin will not provide any visual warnings if the
+# settings are wrong, please manually verify the change
+# ----------------------------------------------------------
+
+parser: "@typescript-eslint/parser"
+extends:
+  - airbnb
+  - plugin:@typescript-eslint/recommended
+parserOptions:
+  project: ./tsconfig.json
+  sourceType: module
+globals:
+  Atmics: readonly
+  SharedArrayBuffer: readonly
+plugins:
+  - react
+rules:
+  linebreak-style:
+    - error
+    - windows
+  quotes:
+    - error
+    - double
+  # Use typescritp indentation instead
+  "react/jsx-indent":
+    - off
+  # react default to only recognize .jsx files, add .tsx files as well
+  "react/jsx-filename-extension": 
+    - error
+    - extensions:
+      - .jsx
+      - .tsx
+env:
+    # Defined all global variables
+    node: true
+    browser: true
+settings:
+  # Setting for eslint-plugin-import to use eslint-import-resolver-typescript
+  import/resolver:
+    typescript:
+      directory: ""
+  # Ignore react and react-dom from file import as they are embedded in html
+  import/core-modules:
+    - react
+    - react-dom
