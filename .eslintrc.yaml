@@ -8,6 +8,9 @@ parser: "@typescript-eslint/parser"
 extends:
   - airbnb
   - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+  # Disables typescript related rules that conflict with prettier
+  - prettier/@typescript-eslint
 parserOptions:
   project: ./tsconfig.json
   sourceType: module

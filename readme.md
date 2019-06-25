@@ -171,4 +171,9 @@ This section contains all related dev-ops tools as well as it's related setting 
         - "@typescript-eslint/eslint-plugin" # Typescript rules for eslint
         - "@typescript-eslint/parser"        # Eslint parser for typescript
         - eslint-import-resolver-typescript  # Resolver for typescript and import
+        # Prettier Settings
+        - eslint-config-prettier             # Prettier Config to resolve package conflict
+        - eslint-plugin-prettier             # Prettier plugin for eslint
+        - prettier                           # Actual prettierrule library
+            setting-files: .prettierrc.js
 ```
