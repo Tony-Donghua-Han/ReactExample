@@ -46,6 +46,7 @@ rules:
         - "**/*.spec.tsx"
         - "**/*.test.ts"
         - "**/*.spec.ts"
+        - "**/*.stories.tsx"
         - "src/__test__/setupEnzyme.ts"
 env:
     # Defined all global variables

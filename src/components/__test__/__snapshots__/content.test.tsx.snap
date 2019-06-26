@@ -2,8 +2,13 @@
 
 exports[`Test content rendering Content should render without breaking 1`] = `
 "<div id=\\"content\\" className=\\"content\\">
-  <div className=\\"absolute-centered center-text\\">
-    Content of body
+  <div className=\\"absolute-centered box-with-padding\\">
+    <div>
+      Content of body
+    </div>
+    <button type=\\"button\\" onClick={[Function: clickEvent]}>
+      Click Me
+    </button>
   </div>
 </div>"
 `;
