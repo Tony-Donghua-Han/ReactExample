@@ -176,4 +176,6 @@ This section contains all related dev-ops tools as well as it's related setting 
         - eslint-plugin-prettier             # Prettier plugin for eslint
         - prettier                           # Actual prettierrule library
             setting-files: .prettierrc.js
+        # Javascript Promise Rule Plugins
+        - eslint-plugin-promise             # Recommonded Promise linting rules
 ```
