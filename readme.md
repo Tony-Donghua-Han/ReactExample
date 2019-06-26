@@ -15,6 +15,8 @@
 - Typescript - Compile and type verification
 - Eslint - linting and autofixing
 - Jest - unit test and snapshot test
+- VS Code Debug - Chrome Debugger, Jest Unit Test Debugger
+- Storybook - Isolated UI Component Development
 - Webpack - local and development server
   - Sass and css - dynamic style loading
   - Dynamic HTML - html generation code
@@ -24,10 +26,7 @@
 
 ## ToDo
 
-- [ ] Jest Local Debug with break points
-- [ ] VS Code debug tool for dev
-- [ ] React and redux dev tools in browser
-- [ ] Storybook for UI testing
+- [ ] Mobile Storybook plugin, other addons
 - [ ] Deploy to aws
 - [ ] Auto deployment to aws
 - [ ] Auto test before deployment
@@ -49,8 +48,6 @@ Here we provide a quick list of require plugins and it's setting. Check individu
     {
         "eslint.autoFixOnSave": true,
         "eslint.validate": [
-            "javascript",
-            "javascriptreact",
             { "language": "typescript", "autoFix": true },
             { "language": "typescriptreact", "autoFix": true }
         ],
@@ -152,11 +149,11 @@ This section contains all related dev-ops tools as well as it's related setting 
 
 ```yaml
     setting-file:
-        - tsconfig               # Typescript config file
+        - tsconfig                   # Typescript config file
     npm-packages:
-        - source-map-loader      # Integrate source map with TypeScript code
-        - ts-loader              # Webpack integration
-        - typescript             # Base package required to run tsc for compile
+        - source-map-loader          # Integrate source map with TypeScript code
+        - awesome-typescript-loader  # Webpack integration
+        - typescript                 # Base package required to run tsc for compile
 ```
 
 ## 5. React
@@ -214,7 +211,26 @@ This section contains all related dev-ops tools as well as it's related setting 
         - "@types/enzme-adapter-react-16"
         # ! Important ! #
         # We include React in dev-dependencies
-        # This is only needed for testing
+        - react
+        - react-dom
+```
+
+## 8. Storybook
+
+```yaml
+    setting-files:
+        - .storybook/config.js         # Base Storybook configuration
+        - .storybook/webpack.config.js # Storybook webpack config
+
+    npm-packages:
+        - "@storybook/react"           # Base package
+        - "@types/storybook__react"    # Type for base package
+        - "@babel/core"                # Storybook required dependency
+        - "babel-loader"               # Storybook required dependency
+        ## Css style loader
+        - style-loader                 # Css style loader for storybook
+        # ! Important ! #
+        # We include React in dev-dependencies
         - react
         - react-dom
 
