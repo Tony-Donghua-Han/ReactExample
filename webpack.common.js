@@ -9,7 +9,7 @@ module.exports = {
             {
                 enforce: "pre",
                 test: /\.js$/,
-                loader: "source-map-loader"
+                loader: "source-map-loader",
             },
             {
                 test: /\.hbs$/,
@@ -17,8 +17,8 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                loader: "ts-loader"
-            }
+                loader: "ts-loader",
+            },
         ],
     },
     plugins: [
@@ -26,16 +26,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Hello world",
             filename: "mainpage.html",
-            template: "src/index.hbs"
+            template: "src/index.hbs",
         }),
     ],
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json"],
     },
-    // Ignore import of react and react-dom so they can be loaded as separate script from 
+    // Ignore import of react and react-dom so they can be loaded as separate script from
     // html and have browser cache them instead
     externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
-    }
-}
+        react: "React",
+        "react-dom": "ReactDOM",
+    },
+};
