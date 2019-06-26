@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test content rendering Content should render without breaking 1`] = `
+"<div id=\\"content\\" className=\\"content\\">
+  <div className=\\"absolute-centered center-text\\">
+    Content of body
+  </div>
+</div>"
+`;

@@ -1,4 +1,5 @@
 [ESLint PI]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[JEST PI]: https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
 [markdownlink PI]: https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
 [icon PI]: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
 [comment PI]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
@@ -13,6 +14,7 @@
 - React - external library support
 - Typescript - Compile and type verification
 - Eslint - linting and autofixing
+- Jest - unit test and snapshot test
 - Webpack - local and development server
   - Sass and css - dynamic style loading
   - Dynamic HTML - html generation code
@@ -22,10 +24,14 @@
 
 ## ToDo
 
-- [ ] Jest for unit testing
-- [ ] VS Code debug tool, local debug on both dev and prod
+- [ ] Jest Local Debug with break points
+- [ ] VS Code debug tool for dev
 - [ ] React and redux dev tools in browser
 - [ ] Storybook for UI testing
+- [ ] Deploy to aws
+- [ ] Auto deployment to aws
+- [ ] Auto test before deployment
+- [ ] VS Code debug tool for prod
 
 # Quick Setup
 
@@ -56,6 +62,18 @@ Here we provide a quick list of require plugins and it's setting. Check individu
     ```js
     {
         "editor.formatOnSave": false
+    }
+    ```
+
+## Jest - [Official Plugin Page][JEST PI]
+
+`Feature: Automatic Test Run, Failure Highlight, File Coverage Highlight`
+
+- Turn Coverage Map On in VS Code Settings
+
+    ```js
+    {
+        "jest.showCoverageOnLoad": true
     }
     ```
 
@@ -130,7 +148,7 @@ This section contains all related dev-ops tools as well as it's related setting 
         - sass-loader             # Sass loader used for webpack
 ```
 
-# 4. Typescript
+## 4. Typescript
 
 ```yaml
     setting-file:
@@ -141,24 +159,24 @@ This section contains all related dev-ops tools as well as it's related setting 
         - typescript             # Base package required to run tsc for compile
 ```
 
-# 5. React
+## 5. React
 
 ```yaml
     # !!IMPORTANT!! #
     # React and React dom are included as script tag in the handlebar index.hbs files
-    # these two libraries are not included as dependency to the project, we only
-    # include their type files so their references can be used in code
+    # these two libraries are not included as dependency to the project
 
     npm-packages:
         - "@types/react"
         - "@types/react-dom"
 ```
 
-# 6. Eslint
+## 6. Eslint
 
 ```yaml
     setting-files:
         - eslintrc.yaml                     # Eslint setting, read the file for more detail
+        - .prettierrc.js                    # Prettier settings for linting and auto formating
     plugin:
         - ESLint                            # Eslint plugin, required
     npm-packages:
@@ -175,7 +193,29 @@ This section contains all related dev-ops tools as well as it's related setting 
         - eslint-config-prettier             # Prettier Config to resolve package conflict
         - eslint-plugin-prettier             # Prettier plugin for eslint
         - prettier                           # Actual prettierrule library
-            setting-files: .prettierrc.js
         # Javascript Promise Rule Plugins
-        - eslint-plugin-promise             # Recommonded Promise linting rules
+        - eslint-plugin-promise              # Recommonded Promise linting rules
+```
+
+## 7. Jest
+
+```yaml
+    setting-files:
+        - jest.config.js               # Jest test settings
+
+    npm-packages:
+        - jest                         # Default package framework
+        - "@types/jest"
+        - ts-jest                      # Jest typescript support
+        # Enzyme related packages
+        - enzyme
+        - enzyme-adapter-react-16      # React enzyme adapter
+        - "@types/enzyme"
+        - "@types/enzme-adapter-react-16"
+        # ! Important ! #
+        # We include React in dev-dependencies
+        # This is only needed for testing
+        - react
+        - react-dom
+
 ```

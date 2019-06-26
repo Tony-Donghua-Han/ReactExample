@@ -6,47 +6,58 @@
 
 parser: "@typescript-eslint/parser"
 extends:
-  - airbnb
-  - plugin:@typescript-eslint/recommended
-  - plugin:promise/recommended
-  - plugin:prettier/recommended
-  # Disables typescript related rules that conflict with prettier
-  - prettier/@typescript-eslint
+    - airbnb
+    - plugin:@typescript-eslint/recommended
+    - plugin:promise/recommended
+    - plugin:prettier/recommended
+    # Disables typescript related rules that conflict with prettier
+    - prettier/@typescript-eslint
 parserOptions:
-  project: ./tsconfig.json
-  sourceType: module
+    project: ./tsconfig.json
+    sourceType: module
 globals:
-  Atmics: readonly
-  SharedArrayBuffer: readonly
+    Atmics: readonly
+    SharedArrayBuffer: readonly
 plugins:
-  - react
+    - react
 rules:
-  "@typescript-eslint/explicit-function-return-type": error
-  linebreak-style:
-    - error
-    - windows
-  quotes:
-    - error
-    - double
-  # Use typescritp indentation instead
-  "react/jsx-indent":
-    - off
-  # react default to only recognize .jsx files, add .tsx files as well
-  "react/jsx-filename-extension": 
-    - error
-    - extensions:
-      - .jsx
-      - .tsx
+    "@typescript-eslint/explicit-function-return-type": error
+    linebreak-style:
+        - error
+        - windows
+    quotes:
+        - error
+        - double
+    # Use typescritp indentation instead
+    "react/jsx-indent":
+        - off
+    # react default to only recognize .jsx files, add .tsx files as well
+    "react/jsx-filename-extension":
+        - error
+        - extensions:
+              - .jsx
+              - .tsx
+
+    # Declare test files to only require dev dependencies
+    import/no-extraneous-dependencies: 
+      - error
+      - devDependencies:
+        - "**/*.test.tsx"
+        - "**/*.spec.tsx"
+        - "**/*.test.ts"
+        - "**/*.spec.ts"
+        - "src/__test__/setupEnzyme.ts"
 env:
     # Defined all global variables
     node: true
     browser: true
+    jest: true
 settings:
-  # Setting for eslint-plugin-import to use eslint-import-resolver-typescript
-  import/resolver:
-    typescript:
-      directory: ""
-  # Ignore react and react-dom from file import as they are embedded in html
-  import/core-modules:
-    - react
-    - react-dom
+    # Setting for eslint-plugin-import to use eslint-import-resolver-typescript
+    import/resolver:
+        typescript:
+            directory: ""
+    # Ignore react and react-dom from file import as they are embedded in html
+    import/core-modules:
+        - react
+        - react-dom

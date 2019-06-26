@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import "./content.sass";
 
 export default function Content(): JSX.Element {
