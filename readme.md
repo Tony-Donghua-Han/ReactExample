@@ -1,6 +1,7 @@
 [ESLint PI]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [JEST PI]: https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
 [markdownlink PI]: https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
+[chromeDebug PI]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome#review-details
 [icon PI]: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
 [comment PI]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
 [gitlens PI]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
@@ -15,8 +16,9 @@
 - Typescript - Compile and type verification
 - Eslint - linting and autofixing
 - Jest - unit test and snapshot test
+- VS Code Debug - Chrome Debugger, Jest Unit Test Debugger
 - Webpack - local and development server
-  - Sass and css - dynamic style loading
+  - sass and css - dynamic style loading
   - Dynamic HTML - html generation code
   - DevServer - development server for hot-reloading
 - Markdown - Readme file, syntax highlight and validation
@@ -24,8 +26,6 @@
 
 ## ToDo
 
-- [ ] Jest Local Debug with break points
-- [ ] VS Code debug tool for dev
 - [ ] React and redux dev tools in browser
 - [ ] Storybook for UI testing
 - [ ] Deploy to aws
@@ -69,13 +69,9 @@ Here we provide a quick list of require plugins and it's setting. Check individu
 
 `Feature: Automatic Test Run, Failure Highlight, File Coverage Highlight`
 
-- Turn Coverage Map On in VS Code Settings
+## Debugger for Chrome - [Official Plugin Page][chromeDebug PI]
 
-    ```js
-    {
-        "jest.showCoverageOnLoad": true
-    }
-    ```
+`Feature: Lint feature for .md documentation files`
 
 ## markdownlint - [Official Plugin Page][markdownlink PI]
 
