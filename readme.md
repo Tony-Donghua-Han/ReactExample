@@ -7,6 +7,7 @@
 [gitlens PI]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 [markdownhelp PI]: https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
 [SASS PI]: https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented#review-details
+[reactDebug PI]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
 
 # **React Project**
 
@@ -26,12 +27,12 @@
 
 ## ToDo
 
-- [ ] React and redux dev tools in browser
-- [ ] Storybook for UI testing
+- [ ] Storybook for UI Development and Testing
 - [ ] Deploy to aws
 - [ ] Auto deployment to aws
 - [ ] Auto test before deployment
 - [ ] VS Code debug tool for prod
+- [ ] redux dev tools in browser
 
 # Quick Setup
 
@@ -80,6 +81,10 @@ Here we provide a quick list of require plugins and it's setting. Check individu
 ## Sass - [Official Plugin Page][SASS PI]
 
 `Feature: Syntax hightlight for SASS files`
+
+## React Dev tool for Chrome - [Download Page][reactDebug PI]
+
+`Feature: Allow viewing the webpage in React format instead of HTML`
 
 # Recommonded Plugins
 
