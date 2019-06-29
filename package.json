@@ -23,6 +23,8 @@
   "homepage": "https://github.com/Tony-Donghua-Han/ReactExample#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-viewport": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@types/enzyme": "^3.9.4",
