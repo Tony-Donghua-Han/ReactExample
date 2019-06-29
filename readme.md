@@ -27,7 +27,6 @@
 
 ## ToDo
 
-- [ ] Mobile Storybook plugin, other addons
 - [ ] Deploy to aws
 - [ ] Auto deployment to aws
 - [ ] Auto test before deployment
