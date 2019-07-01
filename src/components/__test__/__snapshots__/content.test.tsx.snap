@@ -6,9 +6,6 @@ exports[`Test content rendering Content should render without breaking 1`] = `
     <div>
       Content of body
     </div>
-    <button type=\\"button\\" onClick={[Function: clickEvent]}>
-      Click Me
-    </button>
   </div>
 </div>"
 `;
