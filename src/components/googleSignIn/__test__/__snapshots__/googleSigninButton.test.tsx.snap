@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Google Signin Button tests: Button should render without crushing 1`] = `
+exports[`Google Signin Button Disabled should render without crushing 1`] = `
+"<div className=\\"google-signin-disabled\\">
+  <div className=\\"g-btn-icon\\" />
+  <span className=\\"g-btn-text\\">
+    Sign in with Google
+  </span>
+</div>"
+`;
+
+exports[`Google Signin Button Regular should render without crushing 1`] = `
 "<div className=\\"google-signin\\" onClick={[Function: onClick]} onKeyDown={[Function: handleEnterKey]} role=\\"button\\" tabIndex={0}>
-  <div className=\\"google-btn-icon\\" />
-  <span className=\\"google-btn-text\\">
+  <div className=\\"g-btn-icon\\" />
+  <span className=\\"g-btn-text\\">
     Sign in with Google
   </span>
 </div>"

@@ -10,3 +10,10 @@ stories.add(
         return <GoogleSigninButton onClick={action("button-clicked")} />;
     },
 );
+
+stories.add(
+    "disabled",
+    (): JSX.Element => {
+        return <GoogleSigninButton onClick={action("button-clicked")} disabled />;
+    },
+);

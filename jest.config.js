@@ -52,7 +52,7 @@ module.exports = {
     // "@public/(.*)$": "<rootDir>/src/public/$1",
     // Work with webpack, change all css/sass import into no working import
     moduleNameMapper: {
-        "\\.(css|sass)$": "<rootDir>/src/__mocks__/styleMock.ts"
+        "\\.(css|sass)$": "<rootDir>/src/__mocks__/styleMock.ts",
     },
 
     // A preset that is used as a base for Jest's configuration
@@ -114,7 +114,7 @@ module.exports = {
     // unmockedModulePathPatterns: undefined,
 
     // Indicates whether each individual test should be reported during the run
-    // verbose: null,
+    verbose: true,
 
-    "setupFilesAfterEnv": ["<rootDir>src/__test__/setupEnzyme.ts"]
+    setupFilesAfterEnv: ["<rootDir>src/__test__/setupEnzyme.ts"],
 };
