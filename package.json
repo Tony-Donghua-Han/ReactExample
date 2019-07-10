@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint src/**/*.tsx src/**/*.ts",
-    "build-prod": "webpack --config webpack.prod.js",
+    "build-prod": "npm run eslint & webpack --config webpack.prod.js",
     "build": "webpack --config webpack.dev.js",
     "devserver": "webpack-dev-server --config webpack.dev.js",
     "test": "jest",
