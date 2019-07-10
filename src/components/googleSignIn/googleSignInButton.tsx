@@ -2,7 +2,7 @@ import React from "react";
 import "./googleSigninButton.sass";
 
 interface GoogleSigninButtonProp {
-    onClick(): void;
+    onClick?(): void;
     disabled?: boolean;
 }
 
