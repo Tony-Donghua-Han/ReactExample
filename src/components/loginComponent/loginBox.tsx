@@ -2,12 +2,9 @@ import React from "react";
 import GoogleSignin from "../googleSignIn/googleSignInButton";
 import "./loginBox.sass";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface GoogleSigninButtonProp {}
+// interface LoginBoxProps {}
 
-export default function GoogleSigninButton(props: GoogleSigninButtonProp): JSX.Element {
-    // eslint-disable-next-line no-console
-    console.log(props);
+export default function LoginBox(): JSX.Element {
     return (
         <div className="loginBox" id="loginBox">
             <div className="title">Login</div>

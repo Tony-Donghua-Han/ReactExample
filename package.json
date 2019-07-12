@@ -33,6 +33,7 @@
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
     "@types/storybook__react": "^4.0.2",
+    "@types/yup": "^0.26.21",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "awesome-typescript-loader": "^5.2.1",
@@ -70,5 +71,9 @@
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "formik": "^1.5.7",
+    "yep": "^0.1.0",
+    "yup": "^0.27.0"
+  }
 }
