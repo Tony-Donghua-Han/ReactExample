@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm should render without crushing 1`] = `
+"<ContextProvider value={{...}}>
+  <Form className=\\"loginForm\\">
+    <FormikConnect(FieldInner) type=\\"email\\" name=\\"email\\" className=\\"inputBox\\" placeHolder=\\"Email\\" />
+    <FormikConnect(ErrorMessageImpl) name=\\"email\\" className=\\"alert\\" component=\\"div\\" />
+    <FormikConnect(FieldInner) type=\\"password\\" name=\\"password\\" className=\\"inputBox\\" placeHolder=\\"Password\\" />
+    <FormikConnect(ErrorMessageImpl) name=\\"password\\" className=\\"alert\\" component=\\"div\\" />
+    <button type=\\"submit\\" disabled={false} className=\\"submitButton\\">
+      Submit
+    </button>
+  </Form>
+</ContextProvider>"
+`;

@@ -19,6 +19,20 @@ function validate(values: LoginFormValues): FormikErrors<LoginFormValues> {
     return errors;
 }
 
+function LoginFormComponent({ isSubmitting }: FormikProps<LoginFormValues>): JSX.Element {
+    return (
+        <Form className="loginForm">
+            <Field type="email" name="email" className="inputBox" placeHolder="Email" />
+            <ErrorMessage name="email" className="alert" component="div" />
+            <Field type="password" name="password" className="inputBox" placeHolder="Password" />
+            <ErrorMessage name="password" className="alert" component="div" />
+            <button type="submit" disabled={isSubmitting} className="submitButton">
+                Submit
+            </button>
+        </Form>
+    );
+}
+
 export default function LoginForm({ onSubmit }: LoginFormProps): JSX.Element {
     const initFormValues: LoginFormValues = {
         email: "",
@@ -31,20 +45,6 @@ export default function LoginForm({ onSubmit }: LoginFormProps): JSX.Element {
     }
 
     return (
-        <Formik initialValues={initFormValues} validate={validate} onSubmit={submitForm}>
-            {({ isSubmitting }: FormikProps<LoginFormValues>): JSX.Element => {
-                return (
-                    <Form className="loginForm">
-                        <Field type="email" name="email" className="inputBox" placeHolder="Email" />
-                        <ErrorMessage name="email" component="div" />
-                        <Field type="password" name="password" className="inputBox" placeHolder="Password" />
-                        <ErrorMessage name="password" component="div" />
-                        <button type="submit" disabled={isSubmitting} className="submitButton">
-                            Submit
-                        </button>
-                    </Form>
-                );
-            }}
-        </Formik>
+        <Formik initialValues={initFormValues} validate={validate} onSubmit={submitForm} render={LoginFormComponent} />
     );
 }
