@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm should render without crushing 1`] = `
+"<div className=\\"loginBox\\" id=\\"loginBox\\">
+  <div className=\\"title\\">
+    Welcome Back
+  </div>
+  <div className=\\"divider\\" />
+  <div className=\\"signinButton\\">
+    <GoogleSigninButton />
+  </div>
+  <div className=\\"divider\\" />
+  <div className=\\"form\\">
+    <LoginForm onSubmit={[Function: onSubmit]} />
+  </div>
+  <div className=\\"loginFooter\\">
+    <div className=\\"forgetPassword link\\">
+      Forget Password?
+    </div>
+    <div className=\\"createAccount\\">
+      <div>
+        Don&#39;t have an account?
+      </div>
+      <div className=\\"link\\">
+        Get Started
+      </div>
+    </div>
+  </div>
+</div>"
+`;
