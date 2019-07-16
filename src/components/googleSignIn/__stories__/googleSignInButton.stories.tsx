@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import GoogleSigninButton from "../googleSignInButton";
 
-const stories = storiesOf("Google Signin Button", module);
+const stories = storiesOf("LoginBox.Google Signin Button", module);
 stories.add(
     "default",
     (): JSX.Element => {
