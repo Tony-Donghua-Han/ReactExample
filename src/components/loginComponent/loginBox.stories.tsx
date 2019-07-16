@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Login from "../loginBox";
+import Login from "./loginBox";
 
 const stories = storiesOf("LoginBox", module);
 stories.add(
-    "default",
+    "active",
     (): JSX.Element => {
         return <Login />;
     },

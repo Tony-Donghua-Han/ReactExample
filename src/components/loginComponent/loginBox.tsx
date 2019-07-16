@@ -1,6 +1,6 @@
 import React from "react";
-import GoogleSignin from "../googleSignIn/googleSignInButton";
-import LoginForm from "../loginForm/loginForm";
+import GoogleSignin from "./googleSignIn/googleSignInButton";
+import LoginForm from "./loginForm/loginForm";
 import "./loginBox.sass";
 
 // interface LoginBoxProps {}
