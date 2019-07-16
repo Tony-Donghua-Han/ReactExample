@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm should render without crushing 1`] = `
+"<div className=\\"registerBox\\" id=\\"registerBox\\">
+  <div className=\\"title\\">
+    Create an account
+  </div>
+  <div className=\\"divider\\" />
+  <div>
+    Registration Form
+  </div>
+  <div className=\\"titleWithLine\\">
+    or
+  </div>
+  <div className=\\"footer\\">
+    <div>
+      Already on Financhy?
+    </div>
+    <div className=\\"link\\">
+      Login In
+    </div>
+  </div>
+</div>"
+`;
