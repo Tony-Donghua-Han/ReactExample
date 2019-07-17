@@ -1,5 +1,6 @@
 import React from "react";
 import "./registerBox.sass";
+import RegistrationForm from "./registrationForm/registrationForm";
 
 // interface RegisterBoxProp {}
 
@@ -8,7 +9,9 @@ export default function RegisterBox(): JSX.Element {
         <div className="registerBox" id="registerBox">
             <div className="title">Create an account</div>
             <div className="divider" />
-            <div>Registration Form</div>
+            <div className="form">
+                <RegistrationForm onSubmit={(): void => {}} />
+            </div>
             <div className="titleWithLine">or</div>
             <div className="footer">
                 <div>Already on Financhy?</div>
