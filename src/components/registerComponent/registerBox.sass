@@ -1,18 +1,11 @@
+@import '../../sass/centeredBox'
+    
 .registerBox
-    border: solid 1px #e1e1e1
-    box-shadow: 2px 2px grey
-    border-radius: 13px
-    max-width: 350px
-    min-width: 230px
-    background-color: white
+    @include externalBox
     
     & .title
-        font-family: 'Montserrat', sans-serif
         font-size: 20px
-        margin-top: 20px
-        margin-bottom: 20px
-        display: block
-        text-align: center
+        @include title-font-and-margin
 
     & .titleWithLine
         width: 85%
@@ -50,7 +43,4 @@
 
     & .divider
         margin: 15px auto 15px auto
-        display: block
-        width: 85%
-        height: 1px
-        background: #e1e1e1
+        @include divider-common

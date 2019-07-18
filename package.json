@@ -4,7 +4,7 @@
   "description": "A template project for react project",
   "main": "index.js",
   "scripts": {
-    "newcomponent": "node template/script/componentTemplate.js",
+    "createcomponent": "node template/script/componentTemplate.js",
     "eslint": "eslint src/**/*.tsx src/**/*.ts",
     "build-prod": "npm run eslint & webpack --config webpack.prod.js",
     "build": "webpack --config webpack.dev.js",
