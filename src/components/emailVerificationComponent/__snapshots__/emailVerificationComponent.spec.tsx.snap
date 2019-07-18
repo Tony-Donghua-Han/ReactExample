@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailVerificationComponent should render without crushing 1`] = `
+"<div className=\\"emailVerificationComponent\\" id=\\"emailVerificationComponent\\">
+  <div className=\\"title\\">
+    Thank you
+  </div>
+  <div className=\\"divider\\" />
+  <div className=\\"textGroup\\">
+    <div className=\\"verifiedIcon\\" />
+    <div className=\\"verificationText\\">
+      Your email has been verified
+    </div>
+  </div>
+  <div className=\\"btnHolder\\">
+    <button className=\\"btn\\" type=\\"button\\">
+      Get Started ❯
+    </button>
+  </div>
+</div>"
+`;
