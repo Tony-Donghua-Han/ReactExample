@@ -4,6 +4,7 @@
   "description": "A template project for react project",
   "main": "index.js",
   "scripts": {
+    "copyfiles": "copyfiles -u 2 ./template/component/*.tsx ./template/component/*.sass",
     "eslint": "eslint src/**/*.tsx src/**/*.ts",
     "build-prod": "npm run eslint & webpack --config webpack.prod.js",
     "build": "webpack --config webpack.dev.js",
@@ -39,6 +40,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "copyfiles": "^2.1.1",
     "css-loader": "^3.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -60,6 +62,7 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "replace-in-file": "^4.1.1",
     "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
