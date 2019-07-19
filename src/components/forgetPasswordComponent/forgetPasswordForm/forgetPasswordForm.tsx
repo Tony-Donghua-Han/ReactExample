@@ -18,7 +18,7 @@ function validate(values: ForgetPasswordFormValues): FormikErrors<ForgetPassword
     return errors;
 }
 
-function LoginFormComponent({ isSubmitting }: FormikProps<ForgetPasswordFormValues>): JSX.Element {
+function ForgetPasswordFormComponent({ isSubmitting }: FormikProps<ForgetPasswordFormValues>): JSX.Element {
     return (
         <Form className="forgetPasswordForm" id="forgetPasswordForm">
             <Field type="input" name="email" className="inputBox" placeHolder="Email Address" />
@@ -44,6 +44,11 @@ export default function ForgetPasswordForm({ onSubmit }: ForgetPasswordFormProps
     }
 
     return (
-        <Formik initialValues={initFormValues} validate={validate} onSubmit={submitForm} render={LoginFormComponent} />
+        <Formik
+            initialValues={initFormValues}
+            validate={validate}
+            onSubmit={submitForm}
+            render={ForgetPasswordFormComponent}
+        />
     );
 }

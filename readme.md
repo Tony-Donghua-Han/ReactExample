@@ -24,6 +24,11 @@
   - DevServer - development server for hot-reloading
 - Markdown - Readme file, syntax highlight and validation
 - Git and npm package
+- Automated Component Creation
+  - tsx
+  - sass
+  - spec.tsx
+  - storeis.tsx
 
 ## ToDo
 
