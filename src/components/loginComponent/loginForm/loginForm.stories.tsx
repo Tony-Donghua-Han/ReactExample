@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import LoginForm from "./loginForm";
 
-const stories = storiesOf("LoginBox.Form", module);
+const stories = storiesOf("Login Box.Form", module);
 stories.add(
     "active",
     (): JSX.Element => {
