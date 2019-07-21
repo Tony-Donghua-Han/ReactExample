@@ -22,9 +22,9 @@ function validate(values: LoginFormValues): FormikErrors<LoginFormValues> {
 function LoginFormComponent({ isSubmitting }: FormikProps<LoginFormValues>): JSX.Element {
     return (
         <Form className="loginForm">
-            <Field type="email" name="email" className="inputBox" placeHolder="Email" />
+            <Field type="email" name="email" className="inputBox" placeholder="Email" />
             <ErrorMessage name="email" className="alert" component="div" />
-            <Field type="password" name="password" className="inputBox" placeHolder="Password" />
+            <Field type="password" name="password" className="inputBox" placeholder="Password" />
             <ErrorMessage name="password" className="alert" component="div" />
             <button type="submit" disabled={isSubmitting} className="submitButton">
                 Submit

@@ -21,7 +21,7 @@ function validate(values: ForgetPasswordFormValues): FormikErrors<ForgetPassword
 function ForgetPasswordFormComponent({ isSubmitting }: FormikProps<ForgetPasswordFormValues>): JSX.Element {
     return (
         <Form className="forgetPasswordForm" id="forgetPasswordForm">
-            <Field type="input" name="email" className="inputBox" placeHolder="Email Address" />
+            <Field type="input" name="email" className="inputBox" placeholder="Email Address" />
             <ErrorMessage name="email" className="alert" component="div" />
             <button type="submit" disabled={isSubmitting} className="submitButton">
                 Reset My Password

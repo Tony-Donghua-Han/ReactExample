@@ -30,13 +30,13 @@ function validate(values: ResetPasswordFormValues): FormikErrors<ResetPasswordFo
 function ResetPasswordFormComponent({ isSubmitting }: FormikProps<ResetPasswordFormValues>): JSX.Element {
     return (
         <Form className="resetPasswordForm" id="resetPasswordForm">
-            <Field type="password" name="newPassword" className="inputBox" placeHolder="New Password" />
+            <Field type="password" name="newPassword" className="inputBox" placeholder="New Password" />
             <ErrorMessage name="newPassword" className="alert" component="div" />
             <Field
                 type="password"
                 name="confirmationPassword"
                 className="inputBox"
-                placeHolder="Confirm New Password"
+                placeholder="Confirm New Password"
             />
             <ErrorMessage name="confirmationPassword" className="alert" component="div" />
             <button type="submit" disabled={isSubmitting} className="submitButton">
