@@ -7,13 +7,7 @@ import "./index.sass";
 
 ReactDOM.render(<MainComponent />, document.getElementById("mainApp"));
 
-function testAuthorization(): void {
-    console.log("Testing authorization for website");
-    return null;
-}
-
 function MainComponent(): JSX.Element {
-    testAuthorization();
     return (
         <div className="page-layout-wrapper">
             <Header />
