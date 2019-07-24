@@ -11,8 +11,9 @@ if (!inputParameter) {
     return 0
 }
 
-var outDir = "./src/components/"
+const templateDir ="./script/createComponent/assets/"
 
+var outDir = "./src/components/"
 var folderStructure = inputParameter.split('/');
 if (folderStructure.length > 1){
     folderStructure.forEach((dir, index) => {
@@ -43,7 +44,7 @@ if (!fs.existsSync(outDir)) {
 var fileExtension = ["sass", "spec.tsx", "stories.tsx", "tsx"];
 
 fileExtension.forEach((extension) => {
-    fs.readFile(`template/component/template.${extension}`, "utf8", (err, data) => {
+    fs.readFile(`${templateDir}template.${extension}`, "utf8", (err, data) => {
         if (err) throw err;
     
         var result = data.replace(/template/g, componentName).replace(/Template/g, componentNameUpperCase);
