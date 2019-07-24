@@ -1,10 +1,13 @@
 @mixin externalBox
+    @include externalBoxWidthLimit
     border: solid 1px #e1e1e1
     box-shadow: 2px 2px grey
     border-radius: 13px
+    background-color: white
+
+@mixin externalBoxWidthLimit
     max-width: 350px
     min-width: 230px
-    background-color: white
 
 @mixin title-font-and-margin        
     font-family: 'Montserrat', sans-serif
