@@ -1,5 +1,5 @@
 import { configure, addParameters } from "@storybook/react";
-import { INITIAL_VIEWPORTS, configureViewport } from "@storybook/addon-viewport";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const req = require.context("../src", true, /\.stories\.tsx$/);
 

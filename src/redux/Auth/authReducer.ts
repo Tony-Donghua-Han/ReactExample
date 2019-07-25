@@ -1,13 +1,13 @@
 import { AllActions } from "../allActionsEnum";
 import { AuthActions } from "./authAction";
 
-enum AuthStatus {
+export enum AuthStatus {
     noUser = "noUser",
     authenticatingUser = "authenticatingUser",
     userAuthenticated = "userAuthenticated",
 }
 
-interface AuthState {
+export interface AuthState {
     userState: AuthStatus;
     name: string;
 }

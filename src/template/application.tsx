@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./header/header";
 import Footer from "./footer/footer";
-import LoginBox from "../components/loginComponent/loginBox";
+import Main from "../route/main/main.container";
 
 import "./application.sass";
 
@@ -12,9 +12,7 @@ export default function Application(): JSX.Element {
         <div className="application" id="application">
             <div className="page-layout-wrapper">
                 <Header />
-                <div className="loginBoxWrapper">
-                    <LoginBox />
-                </div>
+                <Main />
                 <Footer />
             </div>
         </div>
