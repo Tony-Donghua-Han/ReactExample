@@ -29,6 +29,10 @@ rules:
     quotes:
         - error
         - double
+    # Same rule as ts no-unused-vars rule
+    no-unused-vars: 
+        - error
+        - argsIgnorePattern: "^_"
     # Use typescritp indentation instead
     "react/jsx-indent":
         - off
