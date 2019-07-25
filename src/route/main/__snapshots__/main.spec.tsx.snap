@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main authenticatingUser state should render without crushing 1`] = `
+"<div className=\\"main\\" id=\\"main\\">
+  <LoginBox />
+</div>"
+`;
+
+exports[`Main noUser state should render without crushing 1`] = `
+"<div className=\\"main\\" id=\\"main\\">
+  <LoginBox />
+</div>"
+`;
+
+exports[`Main userAuthenticated state should render without crushing 1`] = `
+"<div className=\\"main\\" id=\\"main\\">
+  Customer name is 
+</div>"
+`;

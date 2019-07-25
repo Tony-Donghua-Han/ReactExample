@@ -6,7 +6,7 @@ export interface LoginFormProps {
     onSubmit(values: LoginFormValues): void;
 }
 
-interface LoginFormValues {
+export interface LoginFormValues {
     email: string;
     password: string;
 }

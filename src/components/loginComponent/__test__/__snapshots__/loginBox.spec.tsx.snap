@@ -11,7 +11,7 @@ exports[`LoginForm should render without crushing 1`] = `
   </div>
   <div className=\\"divider\\" />
   <div className=\\"form\\">
-    <LoginForm onSubmit={[Function: onSubmit]} />
+    <Connect(LoginForm) />
   </div>
   <div className=\\"loginFooter\\">
     <div className=\\"forgetPassword link\\">

@@ -1,5 +1,5 @@
 import { AllActions } from "../allActionsEnum";
-import { AuthActions } from "./authAction";
+import { AuthActions } from "./auth.action";
 
 export enum AuthStatus {
     noUser = "noUser",

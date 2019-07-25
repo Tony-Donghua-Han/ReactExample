@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render without crushing 1`] = `
+"<div id=\\"header\\" className=\\"header\\">
+  <div className=\\"text\\">
+    Web Title
+  </div>
+</div>"
+`;

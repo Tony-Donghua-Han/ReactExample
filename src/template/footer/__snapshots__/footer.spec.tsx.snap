@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render without crushing 1`] = `
+"<div id=\\"footer\\" className=\\"footer\\">
+  <div className=\\"text\\">
+    Copyright @ 2019. All rights reserved.
+  </div>
+</div>"
+`;

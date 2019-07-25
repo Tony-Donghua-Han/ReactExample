@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { AuthStatus } from "../../redux/Auth/authReducer";
+import { AuthStatus } from "../../redux/Auth/auth.reducer";
 import { RootState } from "../../redux/rootReducer";
 
 import MainComponent, { MainComponentProps } from "./main.component";

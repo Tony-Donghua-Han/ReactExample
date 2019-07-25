@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.sass";
 
-import { AuthStatus } from "../../redux/Auth/authReducer";
+import { AuthStatus } from "../../redux/Auth/auth.reducer";
 import LoginBox from "../../components/loginComponent/loginBox";
 
 export interface MainComponentProps {

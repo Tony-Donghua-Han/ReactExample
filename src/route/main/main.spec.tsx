@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import Main from "./main.component";
 
-import { AuthStatus } from "../../redux/Auth/authReducer";
+import { AuthStatus } from "../../redux/Auth/auth.reducer";
 
 describe("Main", (): void => {
     test("noUser state should render without crushing", (): void => {

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application should render without crushing 1`] = `
+"<div className=\\"application\\" id=\\"application\\">
+  <div className=\\"page-layout-wrapper\\">
+    <Header />
+    <Connect(Main) />
+    <Footer />
+  </div>
+</div>"
+`;

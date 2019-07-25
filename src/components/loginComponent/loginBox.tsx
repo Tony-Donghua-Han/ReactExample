@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleSignin from "./googleSignIn/googleSignInButton";
-import LoginForm from "./loginForm/loginForm";
+import LoginForm from "./loginForm/loginForm.container";
 import "./loginBox.sass";
 
 // interface LoginBoxProps {}
@@ -15,7 +15,7 @@ export default function LoginBox(): JSX.Element {
             </div>
             <div className="divider" />
             <div className="form">
-                <LoginForm onSubmit={(): void => {}} />
+                <LoginForm />
             </div>
             <div className="loginFooter">
                 <div className="forgetPassword link">Forget Password?</div>
