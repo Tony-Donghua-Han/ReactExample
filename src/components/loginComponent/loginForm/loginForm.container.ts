@@ -1,13 +1,16 @@
 import { connect } from "react-redux";
-import { Dispatch } from "redux";
-// import { RootState } from "../../../redux/rootReducer";
+import { ThunkDispatch } from "redux-thunk";
+import { AnyAction } from "redux";
+import { RootState } from "../../../redux/rootReducer";
 
 import LoginForm, { LoginFormProps, LoginFormValues } from "./loginForm.component";
-import { USER_LOADED_ACTION } from "../../../redux/Auth/auth.action";
+import login from "../../../redux/Auth/auth.thunk";
 
 // interface LogininBoxExtParams { }
 
 // interface LogininBoxStateProps { }
+
+type Dispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
 interface LogininBoxDispatchProps {
     onSubmit(values: LoginFormValues): void;
@@ -19,8 +22,8 @@ function mapStateToProps(): {} {
 
 function mapDispatchToProps(dispatch: Dispatch): LogininBoxDispatchProps {
     return {
-        onSubmit: (_values): void => {
-            dispatch(USER_LOADED_ACTION);
+        onSubmit: ({ email, password }): void => {
+            dispatch(login(email, password));
         },
     };
 }

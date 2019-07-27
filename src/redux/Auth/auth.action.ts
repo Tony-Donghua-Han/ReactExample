@@ -2,11 +2,13 @@ import { AllActions } from "../allActionsEnum";
 
 interface UserLoadedAction {
     type: AllActions.userLoaded;
+    name: string;
 }
 
-export const USER_LOADED_ACTION: UserLoadedAction = {
+export const userLoaded = (name: string): UserLoadedAction => ({
     type: AllActions.userLoaded,
-};
+    name,
+});
 
 interface UserLoadingAction {
     type: AllActions.userLoading;
