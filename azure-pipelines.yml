@@ -22,11 +22,11 @@ steps:
   
 - script:
     npm run build
-    ls
+    dir
   displayName: 'build'
 
 - task: PublishCodeCoverageResults@1
   inputs:
-    summaryFileLocation: './junit.xml'
-    reportDirectory: './coverage'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/junit.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
   displayName: Publish Code Coverage
