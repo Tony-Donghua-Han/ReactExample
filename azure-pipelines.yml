@@ -15,14 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script:
+- script: |
     npm install
     npm run test
   displayName: 'test'
   
-- script:
+- script: |
     npm run build
-    dir
+    ls
   displayName: 'build'
 
 - task: PublishCodeCoverageResults@1
