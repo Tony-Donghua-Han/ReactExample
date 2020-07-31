@@ -27,6 +27,6 @@ steps:
 
 - task: PublishCodeCoverageResults@1
   inputs:
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/junit.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/clover.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage/lcov-report'
   displayName: Publish Code Coverage
