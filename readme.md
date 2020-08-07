@@ -24,7 +24,7 @@
   - DevServer - development server for hot-reloading
 - Markdown - Readme file, syntax highlight and validation
 - Git and npm package
-- Asure Pipeline
+- Asure Pipeline Build (No Deploy)
 - Automated Component Creation
   - tsx
   - sass
