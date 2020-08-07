@@ -1,0 +1,19 @@
+version: 0.2
+phaes:
+  install:
+    commands:
+      - npm install
+  pre_build:
+    commands:
+      - npm run test
+  build:
+    commands:
+      - npm run build
+reports:
+  Tony-Test-Report-Group:
+    files:
+      - "**/coverage"
+    file-format: CloverXml
+artifacts:
+  files:
+    - '**/dist/*'
