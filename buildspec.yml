@@ -12,8 +12,8 @@ phases:
 reports:
   Tony-Test-Report-Group:
     files:
-      - "**/coverage"
+      - "coverage/**/*"
     file-format: CloverXml
 artifacts:
   files:
-    - '**/dist/*'
+    - 'dist/**/*'
