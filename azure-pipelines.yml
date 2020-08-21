@@ -22,6 +22,12 @@ jobs:
       npm run test
     displayName: 'test'
     continueOnError: 'true'
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: cobertura
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+    displayName: Publish Code Coverage
   
   - task: PublishTestResults@2
     displayName: 'Publish Jest Unit Test Results'
@@ -33,12 +39,6 @@ jobs:
   - script: |
       npm run build
     displayName: 'build'
-
-  - task: PublishCodeCoverageResults@1
-    inputs:
-      codeCoverageTool: cobertura
-      summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
-    displayName: Publish Code Coverage
 
 - job: PrintSomething
   steps:
