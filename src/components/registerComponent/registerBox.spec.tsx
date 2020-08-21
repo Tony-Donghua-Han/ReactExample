@@ -28,6 +28,6 @@ describe("LoginForm", (): void => {
 
     test("should render footer with Login In link", (): void => {
         const footer: ShallowWrapper = wrapper.find(".footer");
-        expect(footer.find(".link").text()).toBe("Login Ins");
+        expect(footer.find(".link").text()).toBe("Login In");
     });
 });
