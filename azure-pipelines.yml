@@ -21,12 +21,14 @@ jobs:
       npm install
       npm run test
     displayName: 'test'
+    continueOnError: 'true'
   
   - task: PublishTestResults@2
-    condition: succeedOrFailed()
+    displayName: 'Publish Jest Unit Test Results'
     inputs:
-      testRunner: JUnit
-      testResultsFiles: '~/junit.xml'
+      testResultsFiles: 'junit.xml'
+      mergeTestResults: 'true'
+      failTaskOnFailedTests: 'true'
 
   - script: |
       npm run build
