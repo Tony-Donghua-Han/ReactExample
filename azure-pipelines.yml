@@ -9,24 +9,39 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+jobs:
+- job: BuildCode
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run test
-  displayName: 'test'
+  - script: |
+      npm install
+      npm run test
+    displayName: 'test'
+    continueOnError: 'true'
 
-- script: |
-    npm run build
-    ls
-  displayName: 'build'
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: cobertura
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+    displayName: Publish Code Coverage
+  
+  - task: PublishTestResults@2
+    displayName: 'Publish Jest Unit Test Results'
+    inputs:
+      testResultsFiles: 'junit.xml'
+      mergeTestResults: 'true'
+      failTaskOnFailedTests: 'true'
 
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: cobertura
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
-  displayName: Publish Code Coverage
+  - script: |
+      npm run build
+    displayName: 'build'
+
+- job: PrintSomething
+  steps:
+  - script: |
+      echo "Hello World"
+    displayName: Print

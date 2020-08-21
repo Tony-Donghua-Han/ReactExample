@@ -24,7 +24,8 @@
   - DevServer - development server for hot-reloading
 - Markdown - Readme file, syntax highlight and validation
 - Git and npm package
-- Asure Pipeline
+- Azure Pipeline Build (No Deploy)
+- AWS Code Build (No Deploy)
 - Automated Component Creation
   - tsx
   - sass
